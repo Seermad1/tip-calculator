@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+    
+ 
+
+  <main class="container">
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo">
+    </div>
+    <div class="main_container">
+      <div class="column_one">
+
+        <div class="bill">
+          <form class="bill_form" action="">
+            <label for="bill">Bill</label>
+            <div class="input">
+              <img src="images/icon-dollar.svg" class="icon" alt="dollar_icon">
+              <input oninput="getVal()" id="bill" type="text" autocomplete="off" placeholder=0>
+            </div>
+          </form>
+        </div>
+        
+        <div class="select_tip">
+          <form action="" class="select_form">
+            <label for="tips">Select Tip %</label>
+          </form>
+          <div class="tips">
+            <div class="tip" id="five">5%</p></div>
+            <div class="tip" id="ten">10%</div>
+            <div class="tip" id="fifteen">15%</div>
+            <div class="tip" id="twenty_five">25%</div>
+            <div class="tip" id="fifty">50%</div>
+            <div class="custom_tip">
+              <form action="">
+                <input class="tip" oninput="getVal()" id="custom_tip" type="text" autocomplete="off" placeholder="Custom">
+              </form>
+            </div>
+          </div>
+    
+        </div>
+        
+        <div class="people_number">
+          <form action="" class="people_form">
+            <div class="people_label">
+              <label for="number_of_people">Number of People</label>
+              <!-- <small id="small">can't be zero</small> -->
+            </div>
+            <div class="input" id="input">
+              <img class="icon" src="images/icon-person.svg" alt="person_icon">
+              <input oninput="getVal()" type="text" id="number_of_people" autocomplete="off" placeholder=0>
+            </div>
+          </form>
+        </div>
+      
+      </div>
+
+
+      <div class="column_two">
+
+        <div class="person_calc">
+          <div class="">
+           <p class="p_head">Tip Amount</p> 
+           <p class="p_person"> / person</p> 
+          </div>
+          <div class="">
+            <h1 class="calc" id="tip_amount">$0.00</h1>
+          </div>
+        </div>  
+
+        <div class="person_calc total">
+          <div class="">
+            <p class="p_head">Total</p> 
+            <p class="p_person"> / person</p> 
+          </div>
+          <div class="">
+            <h1 class="calc" id="person_bill">$0.00</h1>
+          </div>
+        </div>  
+
+        <div class="reset">
+          <button class="reset_btn">Reset</button>
+        </div>
+
+      </div>
+  
+    </div>
+  </main>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Seermad1">Abdulsamad</a>.
+  </div> -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 800;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    margin-bottom: 4rem;
+}
+.main_container{
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    width: 50%;
+    padding: 1.5rem;
+    column-gap: 2rem;
+}
+.bill_form{
+    display: flex;
+    flex-direction: column;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 1.8rem;
+    padding-top: 0.5rem;
+}
+.input{
+    position: relative;
+}
+/* .icon{
+    position: absolute;
+    left: 0.8rem;
+    bottom: 0;
+} */
+input{
+    font-family: 'Space Mono', monospace;
+    font-weight: 800;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    padding: 0.5rem 0.8rem;
+    text-align: right;
+    outline-color: hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+.select_tip{
+    display: flex;
+    flex-direction: column;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 1.5rem;
+}
+.select_form{
+    padding-bottom: 0.5rem;
+}
+.tips{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.6rem;
+}
+.tip{
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 6px;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.tip.change{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.custom_tip input{
+    padding: 0.6rem 0.8rem;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(186, 14%, 43%);
+    text-align: center;
+}
+.custom_tip input:active{
+    background-color: hsl(189, 41%, 97%);
+}
+.people_form{
+    display: flex;
+    flex-direction: column;
+    color: hsl(186, 14%, 43%);
+    padding: 1rem 0;
+}
+.input{
+    position: relative;
+}
+.icon{
+    position: absolute;
+    left: 0.8rem;
+    top: 0.5rem;
+}
+label{
+    padding-bottom: 0.3rem;
+}
+
+.people_label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.column_two{ 
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.person_calc{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.reset_btn{
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    background-color:  hsl(183, 79%, 26%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reset_btn:hover{
+    background-color:  hsl(172, 67%, 45%);
+}
+.total{
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+}
+.p_head{
+    color: hsl(0, 0%, 100%);
+}
+.p_person{
+    color: hsl(186, 14%, 43%);
+}
+.calc{
+    color: hsl(172, 67%, 45%);
+}
+.attribution a{
+    text-decoration: none;
+}
+.attribution a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1200px){
+    .main_container{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 800px){
+    .container{
+        display: block;
+    }
+    .logo{
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 2rem;
+    }
+    .main_container{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .tips{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 800px){
+    .main_container{
+        width: 75%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .main_container{
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+    .total{
+        margin-bottom: 2.5rem;
+    }
+}
