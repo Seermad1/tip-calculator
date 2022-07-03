@@ -14,6 +14,7 @@ const resetBtn = document.querySelector(".reset_btn")
 
 let customTipPercent ;
 
+// function that is invoked when there is change in input field
 function getVal(){
     let billValue = parseFloat(bill.value)
     
@@ -33,6 +34,7 @@ function getVal(){
     let personsBill = ((customTipPercent/100)*billValue + billValue)/people
     let personsTip = (personsBill)-(billValue/people)
 
+    // using .NaN to make sure that result is display only when the calculation gives a number
     if(Number.isNaN(personsBill) == true || Number.isNaN(personsTip) == true){
         personBill.innerHTML = `$0.00 `
         tipAmount.innerHTML = `$0.00 `
@@ -41,6 +43,8 @@ function getVal(){
         tipAmount.innerHTML = `$${personsTip.toFixed(2)}`
     }
 
+    
+    // on-click of reset button
     resetBtn.addEventListener("click",()=>{
         billValue = 0
         customTipPercent = 0
@@ -54,6 +58,8 @@ function getVal(){
     })
 }
 
+
+// adding different color to the clicked tip
 tips.forEach(tip => {
     tip.addEventListener('click', () => {
         removeActiveClasses()
@@ -61,12 +67,15 @@ tips.forEach(tip => {
     })
 })
 
+// remove color from tip if anyone has it
 function removeActiveClasses() {
     tips.forEach(tip => {
         tip.classList.remove('change')
     })
 }
 
+
+// get value of the clicked tip
 five.addEventListener("click",()=>{
     customTipPercent = 5
     getVal()
